@@ -2,9 +2,9 @@
 import re  # 正则表达式
 import bs4  # Beautiful Soup 4 解析模块
 import urllib2  # 网络访问模块
-import News
+import News   #自己定义的新闻结构
 import codecs  #解决编码问题的关键 ，使用codecs.open打开文件
-import sys   #1
+import sys   #1解决不同页面编码问题
 
 reload(sys)                         # 2
 sys.setdefaultencoding('utf-8')     # 3
@@ -77,7 +77,7 @@ url_set = set()  # url集合
 url_old = set()  # 爬过的url集合
 
 NewsCount = 0
-MaxNewsCount=3
+MaxNewsCount=30
 
 home = 'http://baijia.baidu.com/'  # 起始位置
 
